@@ -1,0 +1,2 @@
+gcc util.o fw.c -o fw -Wall -O3 -Wno-unused-variable
+gcc util.o -fopenmp  fw_sr.c -o fw_sr -Wall -O3 -Wno-unused-variable

@@ -1,0 +1,2 @@
+gcc -fopenmp -Wall -Wextra -Wno-unused -O3 -c omp_reduction_kmeans.c -o omp_reduction_kmeans.o
+gcc -fopenmp -Wall -Wextra -Wno-unused -O3 main.o file_io.o util.o omp_reduction_kmeans.o -o kmeans_omp_reduction 
