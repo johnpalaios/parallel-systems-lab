@@ -14,8 +14,10 @@ Its main goal was to parallelize a serial version of [Conway's Game Of Life](htt
 ### Exercise 2 : Algorithm Parallelization and Optimization in Shared Memory Architectures
 The goal was to parallelize using OpenMP's API the [K-means Clustering Algorithm](https://en.wikipedia.org/wiki/K-means_clustering)  and the [Floyd-Warshall Algorithm](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm).
 - For K-means clustering, we were assigned two develop two parallel version, one having shared cluster arrays and updating them with atomic operations and the other having copied clusters for each thread and later reducing them to one final array.
+- Benchmarked different Lock implementations on the K-means Clustering algorithm and commented on the differences that they have in their performance due to the their differences in their implementations.
 - For the Floyd-Warshall algorithm, the goal was to parallelize its recursive version (more cache friendly in comparison to the iterative) using OpenMP's Tasks.
 - Benchmarked and compared the serial and parallel version in a NUMA node and observed the different tradeoffs of this architecture
+- Benchmarked and compared 5 Concurrent Linked List implementations and commented on their differences in performance
 
 - [The Report](https://github.com/johnpalaios/parallel-systems-lab/blob/main/parlab-ex02/report_ex02.pdf)
 
