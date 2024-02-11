@@ -1,0 +1,10 @@
+all: jacobi_mpi
+
+jacobi_mpi: jacobi_mpi.c utils.o
+	mpicc jacobi_mpi -o jacobi_mpi.c utils.o
+
+utils.o: utils.c utils.h
+	mpicc -Wall -c utils.c -o utils.o 
+
+clean:
+	rm jacobi_mpi

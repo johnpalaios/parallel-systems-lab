@@ -1,0 +1,2 @@
+mpicc   -c jacobi_mpi.c -o jacobi_mpi.o
+mpicc -lm   -o jacobi_mpi jacobi_mpi.o utils.o

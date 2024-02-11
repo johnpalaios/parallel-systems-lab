@@ -1,0 +1,2 @@
+/usr/local/cuda-12.1/bin/nvcc -O3 -Ihelper_functions  --ptxas-options=-v -arch=sm_60  -c cuda_kmeans_all_gpu.cu -o ObjectDir/cuda_kmeans_all_gpu.o
+/usr/local/cuda-12.1/bin/nvcc -O3 -Ihelper_functions  --ptxas-options=-v -arch=sm_60  ObjectDir/cuda_kmeans_all_gpu.o ObjectDir/main_gpu.o ObjectDir/file_io.o ObjectDir/util.o ObjectDir/error.o ObjectDir/alloc.o ObjectDir/seq_kmeans.o -o kmeans_cuda_all_gpu  

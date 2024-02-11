@@ -1,0 +1,16 @@
+MPICC = mpicc
+CFLAGS = -Wall
+
+all: jacobi_mpi
+
+jacobi_mpi: jacobi_mpi.o utils.o
+    $(MPICC) $(CFLAGS) $^ -o $@
+
+jacobi_mpi.o: jacobi_mpi.c utils.o
+    $(MPICC) $(CFLAGS) -c $< -o $@
+
+utils.o: utils.c
+    $(MPICC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f jacobi_mpi *.o
