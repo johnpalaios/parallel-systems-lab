@@ -39,10 +39,10 @@ The goal was to parallelize 4 different versions of the K-means algorithm on a G
   ### Exerise 4 : Algorithm Parallelization and Optimization on distributed memory architectures.
 The goal was to parallelize 2 different algorithms, the K-means and the 2-d Heat Transfer, assuming a distributed memory architecture and using MPI.
 - The K-means algorithm was parallelized by assigning each MPI process different objects and communicating between them in each iteration.
-- The 2 dimension Heat Transfer problem was solved using the Jacobi method (method for solving partial differential equations) where we assigned each MPI process different blocks of the 2d global block and performed communication between them when needed.
+- The 2 dimensional Heat Transfer problem was solved using the Jacobi method (method for solving partial differential equations) where we assigned each MPI process different blocks of the 2d global block and performed communication between them when needed.
 -  Highly suggest you take a look at the source code of the jacobi mpi implementation ([Link](https://github.com/johnpalaios/parallel-systems-lab/blob/main/parlab-ex04/heat_transfer/mpi/jacobi_mpi.c)).
--  We benchmarked each version for different configurations and number of MPI processes and we plotted the results accordingly. 
-
+-  We benchmarked each version for different configurations and number of MPI processes and we plotted the results accordingly.
+  
 - [The Report](https://github.com/johnpalaios/parallel-systems-lab/blob/main/parlab-ex04/report_ex04.pdf)
 - More info on [/parlab-ex04](https://github.com/johnpalaios/parallel-systems-lab/tree/main/parlab-ex04)
 
